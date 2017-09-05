@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript-Practice</title>
+  </head>
+  <body>
+    <button>Click On Me, Somebody to click on </button>
+    <p>Clickable Text</p>
+    <h4>Act-Once Click</h4>
+  </body>
+
+  <script type="text/javascript">
+      //Target Nodes/ elements
+      var button = document.querySelector("button");
+      var text = document.querySelector("p");
+      //Listen for events on specified nodes
+      button.addEventListener("click", function(){
+        console.log("Button Clicked");
+      })
+      text.addEventListener("click", function(){
+        console.log("Text Clicked");
+      })
+
+      //One time Only Button--
+      var h4 = document.querySelector("h4");
+      function once(){
+        console.log("Done");
+        h4.removeEventListener("click", once);
+      }
+        h4.addEventListener("click", once);
+
+  </script>
+
+</html>

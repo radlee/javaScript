@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Remove Event</title>
+  </head>
+  <body>
+
+    <button>One Time Button</button>
+
+  </body>
+
+  <script type="text/javascript">
+
+  //One time Only Button--
+  var button = document.querySelector("button");
+  function once(){
+    console.log("Done");
+    button.removeEventListener("click", once);
+  }
+    button.addEventListener("click", once);
+
+  </script>
+</html>

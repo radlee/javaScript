@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Current location of the Mouse</title>
+  </head>
+  <body>
+
+  </body>
+
+  <script type="text/javascript">
+
+  function displayCoords(event){
+    document.body.textContent = "Mouse at " + event.pageX + ", " + event.pageY;
+  }
+
+  var scheduled = false, lastevent;
+  addEventListener("mousemove", function(event){
+    lastevent = event;
+    if(!scheduled){
+      scheduled = true;
+      setTimeout(function(){
+        scheduled = false;
+        displayCoords(lastevent);
+      }, 250);
+    }
+  });
+
+  </script>
+</html>

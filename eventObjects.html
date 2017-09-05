@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Event Objects</title>
+  </head>
+  <body>
+    <button>Click Me Anyway You Like</button>
+  </body>
+
+  <script type="text/javascript">
+  var button = document.querySelector("button");
+  button.addEventListener("mousedown", function(event){
+    if(event.which == 1){
+      console.log("Left Button");
+    }
+    else if(event.which == 2) {
+      console.log("Middle Button");
+    }
+    else if (event.which == 3){
+      console.log("Right Button");
+    }
+  })
+
+  </script>
+</html>

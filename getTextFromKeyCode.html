@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Get Text from KeyCode</title>
+  </head>
+  <body>
+    <p>
+      Focus this page and type something
+    </p>
+  </body>
+
+  <script type="text/javascript">
+
+  addEventListener("keypress", function(event){
+    console.log(String.fromCharCode(event.charCode));
+  });
+
+  </script>
+</html>
